@@ -1,0 +1,38 @@
+<?php
+
+/**
+ * Implements hook_schema().
+ */
+function mymodule_schema() {
+  $schema['mymodule_questions'] = [
+    'description' => 'Stores question and answer submitted through the form.',
+    'fields' => [
+      'id' => [
+        'type' => 'serial',
+        'not null' => TRUE,
+        'description' => 'Primary key.',
+      ],
+      'question' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'description' => 'The submitted question.',
+      ],
+      'answer' => [
+        'type' => 'text',
+        'not null' => TRUE,
+        'description' => 'The submitted answer.',
+      ],
+      'created' => [
+        'type' => 'int',
+        'not null' => TRUE,
+        'description' => 'The time when the record was created.',
+      ],
+    ],
+    'primary key' => ['id'],
+  ];
+
+  return $schema;
+}
+
+?>

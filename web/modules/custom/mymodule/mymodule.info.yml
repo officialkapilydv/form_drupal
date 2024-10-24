@@ -1,0 +1,5 @@
+name: 'My first custom module'
+type: module
+core_version_requirement: ^9.4 || ^10
+description: 'code of my first module development'
+package: Custom

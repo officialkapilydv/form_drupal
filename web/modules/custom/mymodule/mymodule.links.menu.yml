@@ -1,0 +1,22 @@
+# custom parent menu 
+mymodule.admin_menu_link:
+  title: 'Menu'
+  description: 'Custom Module Links'
+  parent: system.admin_config_development
+  route_name: <none>
+  weight: -90
+
+# child menu items
+mymodule.myform_menu_link:
+  title: 'Question Form'
+  description: 'Go to the My Form page'
+  parent: mymodule.admin_menu_link
+  route_name: mymodule.my_form
+  menu_name: admin
+
+mymodule.display_data_menu_link:
+  title: 'Question listing'
+  description: 'Go to the Display Data page'
+  parent: mymodule.admin_menu_link
+  route_name: mymodule.display_data
+  menu_name: admin
